@@ -1,5 +1,5 @@
 import os, shutil
-#import schedule
+import schedule
 import time
 
 path = r"C:/Users/taiwo/Downloads/"
@@ -38,3 +38,10 @@ def filesorter():
 
 filesorter()
 
+#schdule
+schedule.every().saturday().at("18:00").do(filesorter)
+
+#run
+while True:
+    schedule.run_pending()
+    time.sleep(1)
